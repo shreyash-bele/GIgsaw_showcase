@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface ReviewsSectionProps {
@@ -21,9 +22,21 @@ const reviews = [
 
 export default function ReviewsSection({ className }: ReviewsSectionProps) {
   return (
-    <section className={cn("py-16 md:py-24 bg-[#F8F9FF]", className)}>
+    <motion.section
+      className={cn("py-16 md:py-24 bg-[#F8F9FF]", className)}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+    >
       <div className="container px-4 md:px-6 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <div>
             <h2 className="text-3xl font-semibold tracking-tight mb-4">
               Customer reviews
@@ -36,7 +49,15 @@ export default function ReviewsSection({ className }: ReviewsSectionProps) {
 
           <div className="grid grid-cols-1 gap-6">
             {reviews.map((review, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
+              <motion.div
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-sm"
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
+                whileHover={{ scale: 1.05 }}
+              >
                 <div className="flex items-center mb-4">
                   <img
                     src={review.avatar}
@@ -61,11 +82,11 @@ export default function ReviewsSection({ className }: ReviewsSectionProps) {
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground">{review.text}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

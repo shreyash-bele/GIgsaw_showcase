@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 interface FooterProps {
   className?: string;
@@ -7,7 +8,12 @@ interface FooterProps {
 
 export default function Footer({ className }: FooterProps) {
   return (
-    <footer className={cn("py-6", className)}>
+    <motion.footer
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className={cn("py-6", className)}
+    >
       <div className="container px-4 md:px-6 max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-xs text-muted-foreground mb-4 md:mb-0">
@@ -23,18 +29,17 @@ export default function Footer({ className }: FooterProps) {
               <span className="sr-only">Twitter</span>
             </a>
             <a
-  className="text-muted-foreground hover:text-foreground"
-  href="https://www.instagram.com/gigsaw.vibes"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <FaInstagram className="h-4 w-4" />
-  <span className="sr-only">Instagram</span>
-</a>
-
+              className="text-muted-foreground hover:text-foreground"
+              href="https://www.instagram.com/gigsaw.vibes"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram className="h-4 w-4" />
+              <span className="sr-only">Instagram</span>
+            </a>
           </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
