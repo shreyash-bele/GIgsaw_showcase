@@ -15,13 +15,13 @@ export default function HeroSection({ className }: HeroSectionProps) {
           <div className="inline-block rounded-full bg-white px-4 py-2 shadow-sm mb-6">
             <p className="text-sm">Transform your Experience</p>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-4 text-black">
             The Future of
             <br />
             Music Space Booking
           </h1>
-          <p className="max-w-[600px] text-muted-foreground md:text-lg mb-8">
-            Download Digijam to book studios, rent equipment, and connect with
+          <p className="max-w-[600px] text-muted-foreground md:text-lg mb-8 text-[#3a3a3a]">
+            Download Gigsaw to book studios, rent equipment, and connect with
             pros—all in one app. Start now!
           </p>
           <div className="flex gap-4 mb-16">
@@ -41,29 +41,25 @@ export default function HeroSection({ className }: HeroSectionProps) {
             </a>
           </div>
         </div>
-        <div className="flex justify-center">
-          <div className="relative w-[280px] md:w-[320px]">
-            <img
-              alt="App interface in hand"
-              className="w-full"
-              src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=800&q=80&auto=format&fit=crop&ixlib=rb-4.0.3"
-              style={{
-                objectFit: "contain",
-                filter: "drop-shadow(0px 8px 24px rgba(0,0,0,0.1))",
-              }}
-            />
-            <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 w-[200px] rounded-3xl overflow-hidden shadow-lg">
-              <img
-                alt="App interface"
-                className="w-full"
-                src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=400&q=80"
-                style={{
-                  objectFit: "cover",
-                }}
-              />
-            </div>
-          </div>
-        </div>
+        <div className="flex justify-center items-center mt-[-40px] md:mt-[-60px] relative">
+  {/* Soft Glow */}
+  <div className="absolute w-[500px] md:w-[650px] h-[600px] md:h-[750px] bg-[#aac8ff] opacity-30 blur-3xl rounded-full -z-10"></div>
+
+  {/* Centered & Enlarged Hand Image */}
+  <div className="relative flex justify-center w-[500px] md:w-[650px] lg:w-[750px]">
+    <img
+      alt="App interface in hand"
+      className="w-full h-auto"
+      src="src/assets/main_2.png"
+      style={{
+        objectFit: "contain",
+        filter: "drop-shadow(0px 10px 30px rgba(0,0,0,0.2))",
+      }}
+    />
+  </div>
+</div>
+
+
       </div>
     </section>
   );

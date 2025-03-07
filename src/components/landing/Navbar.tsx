@@ -17,13 +17,11 @@ export default function Navbar({ className }: NavbarProps) {
       className={cn("sticky top-0 z-50 w-full bg-[#F8F9FF] py-4", className)}
     >
       <div className="container flex items-center justify-between px-4 md:px-6 max-w-6xl mx-auto">
-        <div className="flex items-center gap-2">
-          <a className="flex items-center gap-2" href="#">
-            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#6C5CE7] to-[#a29bfe]">
-              SoundSpace
-            </span>
-          </a>
-        </div>
+      <div className="flex items-center gap-2">
+  <a className="flex items-center gap-2" href="#">
+    <img src="src/assets/Gigsaw_Color.svg" alt="Gigsaw Logo" className="h-14" />
+  </a>
+</div>
         <nav className="hidden md:flex gap-8">
           {navItems.map((item, index) => (
             <a

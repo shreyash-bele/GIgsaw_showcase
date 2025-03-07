@@ -5,6 +5,7 @@ import StatsSection from "./StatsSection";
 import ReviewsSection from "./ReviewsSection";
 import CTASection from "./CTASection";
 import Footer from "./Footer";
+import DownloadAppSection from "./DownloadApp";
 
 export default function LandingPage() {
   return (
@@ -15,7 +16,7 @@ export default function LandingPage() {
         <FeaturesSection />
         <StatsSection />
         <ReviewsSection />
-        <CTASection />
+        <DownloadAppSection />
       </main>
       <Footer className="bg-[#F8F9FF]" />
     </div>
