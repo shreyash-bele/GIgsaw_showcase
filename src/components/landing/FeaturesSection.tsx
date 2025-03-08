@@ -11,25 +11,25 @@ const features = [
     icon: Music,
     title: "Jam Room Booking",
     description: "Find and book rehearsal space instantly.",
-    image: "public/assets/Jam_room.jpg",
+    image: "/assets/Jam_room.jpg",
   },
   {
     icon: Headphones,
     title: "Studio Rentals",
     description: "Professional recording studios on demand.",
-    image: "public/assets/studio_rental.jpg",
+    image: "/assets/studio_rental.jpg",
   },
   {
     icon: Package,
     title: "Equipment Marketplace",
     description: "Rent or buy quality music gear.",
-    image: "public/assets/equipment_marketplace.jpg",
+    image: "/assets/equipment_marketplace.jpg",
   },
   {
     icon: Users,
     title: "Pro Services",
     description: "Connect with industry professionals.",
-    image: "public/assets/pro_service.jpg",
+    image: "/assets/pro_service.jpg",
   },
 ];
 
