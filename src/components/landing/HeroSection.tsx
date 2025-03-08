@@ -88,7 +88,7 @@ export default function HeroSection({ className }: HeroSectionProps) {
             <img
               alt="App interface in hand"
               className="w-full h-auto"
-              src="public/assets/main_2.png"
+              src="/assets/main_2.png"
               style={{
                 objectFit: "contain",
                 filter: "drop-shadow(0px 10px 30px rgba(0,0,0,0.2))",

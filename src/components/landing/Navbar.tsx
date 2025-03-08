@@ -24,7 +24,7 @@ export default function Navbar({ className }: NavbarProps) {
         <div className="flex items-center gap-2">
           <a className="flex items-center gap-2" href="#">
             <img
-              src="public/assets/Gigsaw_Color.svg"
+              src="/assets/Gigsaw_Color.svg"
               alt="Gigsaw Logo"
               className="h-14"
             />
