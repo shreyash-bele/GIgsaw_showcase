@@ -51,7 +51,7 @@ export default function FeaturesSection({ className }: FeaturesSectionProps) {
         >
           <div>
             <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#6C5CE7] text-white font-bold mb-4">
-              <img src="src/assets/arrow_2.svg" alt="Arrow" className="w-6 h-6" />
+              <img src="/assets/arrow_2.svg" alt="Arrow" className="w-6 h-6" />
             </div>
             <h2 className="text-3xl font-medium tracking-tight mb-4">
               Everything You Need, <br /> In One App
