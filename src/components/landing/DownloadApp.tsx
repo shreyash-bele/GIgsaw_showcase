@@ -97,7 +97,7 @@ export default function DownloadAppSection({
             <div className="w-[250px] h-[300px] md:w-[339px] md:h-[359px]">
               <img
                 className="w-full h-full rounded-bl-3xl object-contain"
-                src="public/assets/phone_mockup.png"
+                src="/assets/phone_mockup.png"
                 alt="Mobile app interface"
               />
             </div>
